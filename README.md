@@ -52,26 +52,26 @@ Task  |	Description
   - free (man 3 free)
 
 ### File Descriptions
-AUTHORS: This file contains contributors to this repository
-lb_shell.h: Header file containing all function prototypes and needed libraries
-man_1_simple_shell: man page for simple_shell
-builtins.c:
-void exec_program(char **commands)
-void free_memory(char *buffer)
-Prototypes:
-void perror(const char *str);
-void prompt(void);
-char * _getline(char *);
-void free_memory(char *);
-char *_strdup(char *);
-void split_buffer(char *);
-void exec_program(char **);
-int _strcmp(char *, char *);
-Bugs
+- AUTHORS: This file contains contributors to this repository
+- lb_shell.h: Header file containing all function prototypes and needed libraries
+- man_1_simple_shell: man page for simple_shell
+- builtins.c:
+  - void exec_program(char **commands)
+  - void free_memory(char *buffer)
+-Prototypes:
+  - void perror(const char *str);
+  - void prompt(void);
+  - char * _getline(char *);
+  - void free_memory(char *);
+  - char *_strdup(char *);
+  - void split_buffer(char *);
+  - void exec_program(char **);
+  - int _strcmp(char *, char *);
+### Bugs
 No bugs are known
 
-How To Compile
+### How To Compile
 Use the command: gcc -Wextra -Werror -Wall -pedantic *.c -o shell
 
-Authors
+### Authors
 Roberto Palacios Twitter | Github David De La Hoz Twitter | Github
