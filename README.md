@@ -62,7 +62,7 @@ Task  |	Description
   - #include <string.h>
   - #include <sys/types.h>
   - #include <sys/wait.h>
--Prototypes:
+- Prototypes:
   - void perror(const char *str);
   - void prompt(void);
   - char * _getline(char *);
