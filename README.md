@@ -1,9 +1,9 @@
-simple_shell
-Description
+## Simple_shell
+### Description
 This project is a command line interpreter that is a simple implementation of
 shell that we started April 1st 2020
 
-Tasks
+### Tasks
 Task	Description
 0	Write a README, man page, and AUTHORS file for your shell.
 1	Write a beautiful code that passes the Betty checks.
@@ -12,7 +12,8 @@ Task	Description
 4	Handle the PATH
 5	Implement the exit built-in that exits the shell
 6	Implement the env built-in, that prints the current environment
-Requirements
+
+### Requirements
 Allowed editors: vi, vim, emacs
 All files will be compiled on Ubuntu 14.04 LTS
 Programs and functions will be compiled with gcc 4.8.4 using the flats -Wall -Werror -Wextra and -pedantic
@@ -49,7 +50,7 @@ write (man 2 write)
 malloc (man 3 malloc)
 free (man 3 free)
 
-File Descriptions
+### File Descriptions
 AUTHORS: This file contains contributors to this repository
 lb_shell.h: Header file containing all function prototypes and needed libraries
 man_1_simple_shell: man page for simple_shell
