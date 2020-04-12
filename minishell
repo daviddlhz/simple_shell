@@ -5,7 +5,13 @@
 #include <stdlib.h>
 #include <string.h>
 #define TOKEN_DELIMITERS " \t\r\n\a :"
-
+/**
+ *main - executed a program.
+ *@ac: pointer of a pointer
+ *@av: pointer to a pointer
+ *@env: pointer to a pointer
+ *Return: nothing
+ */
 int main(int ac, char **av, char **env)
 {
 	(void) ac;
