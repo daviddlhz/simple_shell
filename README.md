@@ -55,9 +55,13 @@ Task  |	Description
 - AUTHORS: This file contains contributors to this repository
 - lb_shell.h: Header file containing all function prototypes and needed libraries
 - man_1_simple_shell: man page for simple_shell
-- builtins.c:
-  - void exec_program(char **commands)
-  - void free_memory(char *buffer)
+- Libraries I/O:
+  - #include <stdio.h>
+  - #include <stlib.h>
+  - #include <unistd.h>
+  - #include <string.h>
+  - #include <sys/types.h>
+  - #include <sys/wait.h>
 -Prototypes:
   - void perror(const char *str);
   - void prompt(void);
