@@ -1,6 +1,7 @@
 #ifndef LB_SHELL_H
 #define LB_SHELL_H
 
+/*Libraries I/O */
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -13,6 +14,7 @@
 
 extern char **environ;
 
+/*Prototypes*/
 void perror(const char *str);
 void prompt(void);
 char * _getline(char *);
