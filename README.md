@@ -4,14 +4,15 @@ This project is a command line interpreter that is a simple implementation of
 shell that we started April 1st 2020
 
 ### Tasks
-Task	Description
-0	Write a README, man page, and AUTHORS file for your shell.
-1	Write a beautiful code that passes the Betty checks.
-2	Write a UNIX command line interpreter with usage simple_shell
-3	Handle command line with arguments
-4	Handle the PATH
-5	Implement the exit built-in that exits the shell
-6	Implement the env built-in, that prints the current environment
+Task  |	Description
+----  | -----------
+0 |	Write a README, man page, and AUTHORS file for your shell.
+1	| Write a beautiful code that passes the Betty checks.
+2	| Write a UNIX command line interpreter with usage simple_shell
+3	| Handle command line with arguments
+4	| Handle the PATH
+5	| Implement the exit built-in that exits the shell
+6	| Implement the env built-in, that prints the current environment
 
 ### Requirements
 Allowed editors: vi, vim, emacs
