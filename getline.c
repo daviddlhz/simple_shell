@@ -1,5 +1,9 @@
 #include "lb_shell.h"
-
+/**
+ * _getline - get a new line
+ * @buffer: a pointer
+ * Return: reading a string of text.
+ */
 char *_getline(char *buffer)
 {
 	size_t size_buffer = 1024;
@@ -18,12 +22,12 @@ char *_getline(char *buffer)
 		free_memory(buffer);
 		exit(EXIT_SUCCESS);
 	}
-	if (_strcmp(buffer,"exit\n") == 0)
+	if (_strcmp(buffer, "exit\n") == 0)
 	{
 		free_memory(buffer);
 		exit(EXIT_SUCCESS);
 	}
 	printf("getline : %p\n", buffer);
-	return(buffer);
+	return (buffer);
 
 }
