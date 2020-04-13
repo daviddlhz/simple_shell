@@ -24,8 +24,7 @@ char *_strdup(char *);
 void split_buffer(char *);
 void exec_program(char **);
 int _strcmp(char *, char *);
-//char ** path_get(void);
-void _getenv(void);
+void path_get(void);
 char *_strstr(char *, char *);
 
 /*Environment*/

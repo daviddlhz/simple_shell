@@ -1,5 +1,4 @@
 #include "lb_shell.h"
-#include <string.h>
 /**
  * main - init shell
  *
@@ -10,7 +9,7 @@ int main(int ac, char **av)
 {
 	(void) ac;
 	(void) av;
-
+	path_get();
 	char *buffer = NULL;
 	while (1)
 	{
