@@ -18,7 +18,6 @@ extern char **environ;
 void perror(const char *str);
 void prompt(void);
 char * _getline(char *);
-void free_memory(char *);
 char *_strdup(char *);
 void split_buffer(char *);
 void exec_program(char **);

@@ -23,7 +23,7 @@ int main(int ac, char **av)
 
 		split_buffer(buffer);
 
-		free_memory(buffer);
+		free(buffer);
 	}
 	return (0);
 }

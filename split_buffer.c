@@ -18,6 +18,6 @@ void split_buffer(char *buffer)
 		i++;
 	}
 	commands[i] = NULL;
-
+	free(buffer);
 	exec_program(commands);
 }
