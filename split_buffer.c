@@ -1,8 +1,9 @@
 #include "lb_shell.h"
 /**
  * split_buffer - cut the words in buffer with strtok.
- * @buffer: is a pointer.
- * Return: Split words.
+ * @buffer: is a commands of STDIN.
+ * @path: is a path.
+ * Return: Nothing.
  */
 void split_buffer(char *buffer, char *path)
 {
@@ -12,7 +13,6 @@ void split_buffer(char *buffer, char *path)
 	char *path_cut[MAX_SIZE];
 
 	current_path = _strdup(path);
-	printf("\n current PATH: %s\n", current_path);
 	buffer = strtok(buffer, DELIMITERS);
 
 	while (buffer != NULL)
@@ -31,11 +31,9 @@ void split_buffer(char *buffer, char *path)
 		{
 			path_cut[j] = current_path;
 			current_path = strtok(NULL, DELIMITER_PATH);
-			printf("PATH CUT : %s \n", path_cut[j]);
 			j++;
 		}
 		path_cut[j] = '\0';
 
-	exec_program(commands);
-	concat_path(path_cut);
+	concat_path(path_cut, commands);
 }

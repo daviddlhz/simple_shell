@@ -1,10 +1,11 @@
 #include "lb_shell.h"
 /**
  * exec_program - executed a program.
- * @commands: pointer of a pointer
- * Return: do a copy
+ * @filename: name of file to executed
+ * @commands: commands to executed
+ * Return: Nothing
  */
-void exec_program(char **commands)
+void exec_program(char *filename, char **commands)
 {
 	int status;
 	pid_t pid;
@@ -17,7 +18,7 @@ void exec_program(char **commands)
 	}
 	else if (pid == 0)
 	{
-		if (execve(commands[0], commands, NULL) == -1)
+		if (execve(filename, commands, NULL) == -1)
 		{
 			perror("Errorx ");
 		}

@@ -8,6 +8,7 @@
 #include <string.h>
 #include <sys/types.h>
 #include <sys/wait.h>
+#include <fcntl.h>
 
 /*Macros*/
 #define DELIMITERS " \t\r\n\a :"
@@ -19,16 +20,16 @@
 /*Prototypes*/
 void perror(const char *str);
 void prompt(void);
-char * _getline(char *);
+char *_getline(char *);
 char *_strdup(char *);
 void split_buffer(char *, char *);
-void exec_program(char **);
+void exec_program(char *, char **);
 int _strcmp(char *, char *);
 char *path_get(void);
 char *_strstr(char *, char *);
-void concat_path(char **);
+void concat_path(char **, char **);
 char *_strcat(char *, char*);
-
+char *_strcpy(char *, char *);
 /*Environment*/
 extern char **environ;
 

@@ -4,7 +4,7 @@
  *
  * Return: PATH
  */
-char * path_get(void)
+char *path_get(void)
 {
 	int i;
 	char *path = NULL;

@@ -1,25 +1,35 @@
 #include "lb_shell.h"
 /**
  * concat_path - concat the path with de command
- * @path: wherever
- * @commands: wherever
+ * @path_cut: the path cut
+ * @commands: commands of the shell
  * Return: void
  */
-
-void concat_path(char **path_cut)
+void concat_path(char **path_cut, char **commands)
 {
+	if (access(*commands, F_OK | X_OK) != -1)
+	{
+		exec_program(*commands, commands);
+	}
+
 	int i;
+	char concat[MAX_SIZE];
+	char *cat_command;
 
 	i = 0;
-	//char *concat;
-	while(path_cut[i] != NULL)
+
+	while (path_cut[i] != NULL)
 	{
-		printf("why %d", i);
-		printf("\n concat path_cut %s \n", path_cut[i]);
-		//concat = _strcat(path_cut[i], "/");
-		//concat = _strcat(concat, *commands);
-		//concat = "";
-		i++;
+		_strcpy(concat, path_cut[i]);
+
+	_strcat(concat, "/");
+
+	cat_command = _strcat(concat, *commands);
+
+	if (access(cat_command, F_OK | X_OK) != -1)
+	{
+		exec_program(cat_command, commands);
 	}
-	//printf("\n concat final %s \n", *commands);
+	i++;
+	}
 }

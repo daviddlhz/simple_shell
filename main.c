@@ -1,7 +1,8 @@
 #include "lb_shell.h"
 /**
  * main - init shell
- *
+ * @ac: count the numbers of arguments but in this case not use
+ * @av: the arguments that contains
  * Return: Always 0.
  */
 
@@ -14,7 +15,7 @@ int main(int ac, char **av)
 	(void) av;
 
 	path = path_get();
-	
+
 	while (1)
 	{
 		if (isatty(STDIN_FILENO) == 1)
@@ -23,10 +24,6 @@ int main(int ac, char **av)
 		}
 
 		buffer = _strdup(_getline(buffer));
-
-		printf("main : %p\n", buffer);
-
-		printf("string: %s", buffer);
 
 		split_buffer(buffer, path);
 

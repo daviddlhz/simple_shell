@@ -93,8 +93,10 @@ char *_strstr(char *haystack, char *needle)
 char *_strcat(char *dest, char *src)
 {
 	int i, j;
+
 	i = 0;
 	j = 0;
+
 	while (dest[i] != '\0')
 	{
 		i++;
@@ -106,5 +108,24 @@ char *_strcat(char *dest, char *src)
 		i++;
 	}
 	dest[i] = '\0';
+	return (dest);
+}
+/**
+ * _strcpy -copies the string pointed to by src.
+ * @dest: char type Character.
+ * @src: char type Character
+ * Return: dest.
+ */
+
+char *_strcpy(char *dest, char *src)
+{
+	int i = 0;
+
+	while (src[i])
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = ('\0');
 	return (dest);
 }
