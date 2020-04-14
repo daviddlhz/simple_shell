@@ -25,7 +25,10 @@ int main(int ac, char **av)
 
 		buffer = _strdup(_getline(buffer));
 
-		split_buffer(buffer, path);
+		if (buffer != NULL)
+		{
+			split_buffer(buffer, path);
+		}
 
 		free(buffer);
 	}

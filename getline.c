@@ -22,6 +22,10 @@ char *_getline(char *buffer)
 		free(buffer);
 		exit(EXIT_SUCCESS);
 	}
+	if (*buffer == '\n')
+	{
+		return (NULL);
+	}
 	return (buffer);
 
 }
