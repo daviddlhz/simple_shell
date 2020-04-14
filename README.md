@@ -78,4 +78,4 @@ No bugs are known
 Use the command: gcc -Wextra -Werror -Wall -pedantic *.c -o shell
 
 ### Authors
-Roberto Palacios [Twitter](https://twitter.com/robpalacios11) | [GitHub](https://github.com/robpalacios1) | David De La Hoz [Twitter](https://twitter.com/davidddlhz) | [Github](https://github.com/daviddlhz)
+Roberto Palacios [Twitter](https://twitter.com/robpalacios11) | [GitHub](https://github.com/robpalacios1) | David De La Hoz [Twitter](https://twitter.com/davidddlhz) | [Github](https://twitter.com/DavidDlhz)
