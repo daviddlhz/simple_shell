@@ -22,7 +22,6 @@ char *_getline(char *buffer)
 		free(buffer);
 		exit(EXIT_SUCCESS);
 	}
-	printf("getline : %p\n", buffer);
 	return (buffer);
 
 }
