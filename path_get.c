@@ -2,15 +2,13 @@
 /**
  * path_get - get the path
  *
- * Return: command
- * On error, -1 is returned, and errno is set appropriately.
+ * Return: PATH
  */
-void path_get(void)
+char * path_get(void)
 {
-	int i, j;
+	int i;
 	char *path = NULL;
 	char *get_env;
-	char *path_cut[MAX_SIZE];
 	char *find_path = NULL;
 
 	i = 0;
@@ -23,7 +21,7 @@ void path_get(void)
 		if (get_env == NULL)
 		{
 			free(get_env);
-			//return (NULL);
+			return (NULL);
 		}
 		find_path = strtok(get_env, DELIMITER_PATH);
 
@@ -35,26 +33,5 @@ void path_get(void)
 		i++;
 		free(get_env);
 	}
-
-	if (path != NULL)
-	{
-		j = 0;
-
-		path = strtok(path, DELIMITER_PATH);
-
-		while (path != NULL)
-		{
-			path_cut[j] = path;
-			path = strtok(NULL, DELIMITER_PATH);
-			printf("PATH CUT : %s \n", path_cut[j]);
-			j++;
-		}
-
-	}
-	else
-	{
-		//free(path_cut);
-		free(path);
-	}
-	//return (final_path);
+	return (path);
 }

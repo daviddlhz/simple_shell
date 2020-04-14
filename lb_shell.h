@@ -14,18 +14,20 @@
 #define NEWLINE write(STDOUT_FILENO, "\n", 1)
 #define SEARCH_PATH "PATH"
 #define DELIMITER_PATH "=:"
-#define MAX_SIZE 500
+#define MAX_SIZE 200
 
 /*Prototypes*/
 void perror(const char *str);
 void prompt(void);
 char * _getline(char *);
 char *_strdup(char *);
-void split_buffer(char *);
+void split_buffer(char *, char *);
 void exec_program(char **);
 int _strcmp(char *, char *);
-void path_get(void);
+char *path_get(void);
 char *_strstr(char *, char *);
+void concat_path(char **);
+char *_strcat(char *, char*);
 
 /*Environment*/
 extern char **environ;

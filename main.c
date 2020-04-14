@@ -7,20 +7,28 @@
 
 int main(int ac, char **av)
 {
+	char *path;
+	char *buffer = NULL;
+
 	(void) ac;
 	(void) av;
-	path_get();
-	char *buffer = NULL;
+
+	path = path_get();
+	
 	while (1)
 	{
-		prompt();
+		if (isatty(STDIN_FILENO) == 1)
+		{
+			prompt();
+		}
+
 		buffer = _strdup(_getline(buffer));
 
 		printf("main : %p\n", buffer);
 
 		printf("string: %s", buffer);
 
-		split_buffer(buffer);
+		split_buffer(buffer, path);
 
 		free(buffer);
 	}
