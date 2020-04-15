@@ -9,7 +9,7 @@ void concat_path(char **path_cut, char **commands)
 {
 	if (_strcmp(*commands, "exit") == 0)
 	{
-	       s_exit();
+		s_exit();
 	}
 	else if (_strcmp(*commands, "clear") == 0)
 	{
