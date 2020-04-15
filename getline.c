@@ -6,7 +6,7 @@
  */
 char *_getline(char *buffer)
 {
-	size_t size_buffer = 1024;
+	size_t size_buffer = 1;
 	ssize_t valid_get;
 
 	valid_get = getline(&buffer, &size_buffer, stdin);
@@ -14,11 +14,6 @@ char *_getline(char *buffer)
 	if (valid_get == EOF)
 	{
 		NEWLINE;
-		free(buffer);
-		exit(EXIT_SUCCESS);
-	}
-	if (_strcmp(buffer, "exit\n") == 0)
-	{
 		free(buffer);
 		exit(EXIT_SUCCESS);
 	}
