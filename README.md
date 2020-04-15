@@ -1,4 +1,5 @@
 ## Simple_shell
+
 ### Description
 This project is a command line interpreter that is a simple implementation of
 shell that we started April 1st 2020
@@ -62,15 +63,22 @@ Task  |	Description
   - #include <string.h>
   - #include <sys/types.h>
   - #include <sys/wait.h>
+  - #include <fcntl.h>
 - Prototypes:
   - void perror(const char *str);
   - void prompt(void);
-  - char * _getline(char *);
-  - void free_memory(char *);
+  - char *_getline(char *);
   - char *_strdup(char *);
-  - void split_buffer(char *);
-  - void exec_program(char **);
+  - void split_buffer(char *, char *);
+  - void exec_program(char *, char **);
   - int _strcmp(char *, char *);
+  - char *path_get(void);
+  - char *_strstr(char *, char *);
+  - void concat_path(char **, char **);
+  - char *_strcat(char *, char*);
+  - char *_strcpy(char *, char *);
+- Environment
+  - extern char **environ;
 ### Bugs
 No bugs are known
 
