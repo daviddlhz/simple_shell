@@ -7,11 +7,20 @@
  */
 void concat_path(char **path_cut, char **commands)
 {
-	if (access(*commands, F_OK | X_OK) != -1)
+	if (_strcmp(*commands, "exit") == 0)
+	{
+	       s_exit();
+	}
+	else if (_strcmp(*commands, "clear") == 0)
+	{
+		clear();
+	}
+	else if (access(*commands, F_OK | X_OK) != -1)
 	{
 		exec_program(*commands, commands);
 	}
-
+	else
+	{
 	int i;
 	char concat[MAX_SIZE];
 	char *cat_command;
@@ -31,5 +40,6 @@ void concat_path(char **path_cut, char **commands)
 		exec_program(cat_command, commands);
 	}
 	i++;
+	}
 	}
 }

@@ -30,6 +30,10 @@ char *_strstr(char *, char *);
 void concat_path(char **, char **);
 char *_strcat(char *, char*);
 char *_strcpy(char *, char *);
+
+/*built-ins*/
+void clear(void);
+void s_exit(void);
 /*Environment*/
 extern char **environ;
 
