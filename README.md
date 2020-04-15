@@ -1,13 +1,9 @@
-~~~
 ## Simple_shell
-~~~
-~~~
+
 ### Description
-~~~
-~~~
 This project is a command line interpreter that is a simple implementation of
 shell that we started April 1st 2020
-~~~
+
 ### Tasks
 Task  |	Description
 ----  | -----------
