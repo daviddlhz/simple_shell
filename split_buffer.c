@@ -5,7 +5,7 @@
  * @path: is a path.
  * Return: Nothing.
  */
-void split_buffer(char *buffer, char *path)
+void split_buffer(char *buffer, char *path, char *argv)
 {
 	int i = 0, j = 0;
 	char *current_path = NULL;
@@ -35,5 +35,5 @@ void split_buffer(char *buffer, char *path)
 		}
 		path_cut[j] = '\0';
 
-	concat_path(path_cut, commands);
+		concat_path(path_cut, commands, argv);
 }

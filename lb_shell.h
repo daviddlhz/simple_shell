@@ -22,12 +22,12 @@ void perror(const char *str);
 void prompt(void);
 char *_getline(char *);
 char *_strdup(char *);
-void split_buffer(char *, char *);
+void split_buffer(char *, char *, char *);
 void exec_program(char *, char **);
 int _strcmp(char *, char *);
 char *path_get(void);
 char *_strstr(char *, char *);
-void concat_path(char **, char **);
+void concat_path(char **, char **, char *);
 char *_strcat(char *, char*);
 char *_strcpy(char *, char *);
 

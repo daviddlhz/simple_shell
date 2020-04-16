@@ -5,41 +5,44 @@
  * @commands: commands of the shell
  * Return: void
  */
-void concat_path(char **path_cut, char **commands)
+void concat_path(char **path_cut, char **commands, char *argv)
 {
+	int err = 0;
+
 	if (_strcmp(*commands, "exit") == 0)
 	{
+		err = 1;
 		s_exit();
 	}
 	else if (_strcmp(*commands, "clear") == 0)
 	{
+		err = 1;
 		clear();
 	}
 	else if (access(*commands, F_OK | X_OK) != -1)
 	{
+		err = 1;
 		exec_program(*commands, commands);
 	}
 	else
 	{
-	int i;
-	char concat[MAX_SIZE];
-	char *cat_command;
+		int i = 0;
+		char concat[MAX_SIZE];
+		char *cat_command = NULL;
 
-	i = 0;
-
-	while (path_cut[i] != NULL)
-	{
-		_strcpy(concat, path_cut[i]);
-
-	_strcat(concat, "/");
-
-	cat_command = _strcat(concat, *commands);
-
-	if (access(cat_command, F_OK | X_OK) != -1)
-	{
-		exec_program(cat_command, commands);
+		while (path_cut[i] != NULL)
+		{
+			_strcpy(concat, path_cut[i]);
+			_strcat(concat, "/");
+			cat_command = _strcat(concat, *commands);
+			if (access(cat_command, F_OK | X_OK) != -1)
+			{
+				err = 1;
+				exec_program(cat_command, commands);
+			}
+			i++;
+		}
 	}
-	i++;
-	}
-	}
+	if (err == 0)
+		printf("%s: No such file or directory\n", argv);
 }
