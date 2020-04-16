@@ -1,4 +1,4 @@
-#include "lb_shell.h"
+#include "shell.h"
 /**
  * _strdup - is a function copy the array in other
  * @str: is the array that is copy
@@ -23,14 +23,14 @@ char *_strdup(char *str)
 		count++;
 	}
 
-	s = malloc(count);
+	s = malloc(sizeof(char) * (count + 1));
 
 	if (s == NULL)
 	{
 		return (NULL);
 	}
 
-	for (i = 0; i < count + 1; i++)
+	for (i = 0; i < count; i++)
 	{
 		s[i] = str[i];
 	}

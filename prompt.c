@@ -1,4 +1,4 @@
-#include "lb_shell.h"
+#include "shell.h"
 /**
  * prompt - start of prompt.
  *

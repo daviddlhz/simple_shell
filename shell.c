@@ -1,4 +1,4 @@
-#include "lb_shell.h"
+#include "shell.h"
 /**
  * main - init shell
  * @argc: count the numbers of arguments but in this case not use
@@ -26,8 +26,6 @@ int main(__attribute__((unused)) int argc, char **argv)
 		{
 			split_buffer(buffer, path, argv[0]);
 		}
-
-		free(buffer);
 	}
 	return (0);
 }

@@ -1,5 +1,5 @@
-#ifndef LB_SHELL_H
-#define LB_SHELL_H
+#ifndef SHELL_H
+#define SHELL_H
 
 /*Libraries I/O */
 #include <stdio.h>

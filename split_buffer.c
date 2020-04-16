@@ -1,4 +1,4 @@
-#include "lb_shell.h"
+#include "shell.h"
 /**
  * split_buffer - cut the words in buffer with strtok.
  * @buffer: is a commands of STDIN.
@@ -23,7 +23,6 @@ void split_buffer(char *buffer, char *path, char *argv)
 		i++;
 	}
 	commands[i] = '\0';
-	free(buffer);
 
 		j = 0;
 		path = strtok(current_path, DELIMITER_PATH);
@@ -35,6 +34,6 @@ void split_buffer(char *buffer, char *path, char *argv)
 			j++;
 		}
 		path_cut[j] = '\0';
-
+		free(buffer);
 		concat_path(path_cut, commands, argv);
 }

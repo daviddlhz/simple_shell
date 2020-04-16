@@ -1,4 +1,4 @@
-#include "lb_shell.h"
+#include "shell.h"
 /**
  * _getline - get a new line
  * @buffer: a pointer
@@ -14,7 +14,6 @@ char *_getline(char *buffer)
 	if (valid_get == EOF)
 	{
 		NEWLINE;
-		free(buffer);
 		exit(EXIT_SUCCESS);
 	}
 	if (*buffer == '\n')

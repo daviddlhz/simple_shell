@@ -1,4 +1,4 @@
-#include "lb_shell.h"
+#include "shell.h"
 /**
  * concat_path - concat the path with de command
  * @path_cut: the path cut
@@ -45,5 +45,5 @@ void concat_path(char **path_cut, char **commands, char *argv)
 		}
 	}
 	if (err == 0)
-		printf("%s: No such file or directory\n", argv);
+		printf("%s: %s: not found\n", argv, *commands);
 }
