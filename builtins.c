@@ -1,6 +1,6 @@
 #include "lb_shell.h"
 /**
- * clear: Clear the display of terminal.
+ * clear - clear display of terminal.
  *
  * Return: Nothing.
  */
@@ -10,7 +10,7 @@ void clear(void)
 }
 
 /**
- * s_exit: exit of the terminal.
+ * s_exit - exit of the terminal.
  *
  * Return: Nothing.
  */
