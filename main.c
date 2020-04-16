@@ -6,13 +6,10 @@
  * Return: Always 0.
  */
 
-int main(int ac, char **av)
+int main(__attribute__((unused)) int argc, char **argv)
 {
-	char *path;
+	char *path = NULL;
 	char *buffer = NULL;
-
-	(void) ac;
-	(void) av;
 
 	path = path_get();
 
@@ -27,7 +24,7 @@ int main(int ac, char **av)
 
 		if (buffer != NULL)
 		{
-			split_buffer(buffer, path);
+			split_buffer(buffer, path, argv[0]);
 		}
 
 		free(buffer);
