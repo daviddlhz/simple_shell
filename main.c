@@ -1,8 +1,8 @@
 #include "lb_shell.h"
 /**
  * main - init shell
- * @ac: count the numbers of arguments but in this case not use
- * @av: the arguments that contains
+ * @argc: count the numbers of arguments but in this case not use
+ * @argv: the arguments that contains
  * Return: Always 0.
  */
 
