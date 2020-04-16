@@ -3,6 +3,7 @@
  * concat_path - concat the path with de command
  * @path_cut: the path cut
  * @commands: commands of the shell
+ * @argv: argument with executed the shell
  * Return: void
  */
 void concat_path(char **path_cut, char **commands, char *argv)

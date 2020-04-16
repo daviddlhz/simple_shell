@@ -3,6 +3,7 @@
  * split_buffer - cut the words in buffer with strtok.
  * @buffer: is a commands of STDIN.
  * @path: is a path.
+ * @argv: argument with executed the shell
  * Return: Nothing.
  */
 void split_buffer(char *buffer, char *path, char *argv)
