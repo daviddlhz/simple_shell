@@ -20,7 +20,7 @@
 /*Prototypes*/
 void perror(const char *str);
 void prompt(void);
-char *_getline(char *);
+char *_getline(char *, int);
 char *_strdup(char *);
 void split_buffer(char *, char *, char *);
 void exec_program(char *, char **);

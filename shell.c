@@ -10,17 +10,20 @@ int main(__attribute__((unused)) int argc, char **argv)
 {
 	char *path = NULL;
 	char *buffer = NULL;
+	int value_isa = 0;
 
 	path = path_get();
 
 	while (1)
 	{
-		if (isatty(STDIN_FILENO) == 1)
+		value_isa = isatty(STDIN_FILENO);
+
+		if (value_isa == 1)
 		{
 			prompt();
 		}
 
-		buffer = _strdup(_getline(buffer));
+		buffer = _strdup(_getline(buffer, value_isa));
 
 		if (buffer != NULL)
 		{
