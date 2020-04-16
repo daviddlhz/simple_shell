@@ -1,10 +1,10 @@
-## Simple_shell
+# Simple_shell
 
-### Description
+## Description
 This project is a command line interpreter that is a simple implementation of
 shell that we started April 1st 2020
 
-### Tasks
+## Tasks
 Task  |	Description
 ----  | -----------
 0 |	Write a README, man page, and AUTHORS file for your shell.
@@ -15,7 +15,7 @@ Task  |	Description
 5	| Implement the exit built-in that exits the shell
 6	| Implement the env built-in, that prints the current environment
 
-### Requirements
+## Requirements
 - Allowed editors: vi, vim, emacs
 - All files will be compiled on Ubuntu 14.04 LTS
 - Programs and functions will be compiled with gcc 4.8.4 using the flats -Wall -Werror -Wextra and -pedantic
@@ -52,7 +52,7 @@ Task  |	Description
   - malloc (man 3 malloc)
   - free (man 3 free)
 
-### File Descriptions
+## File Descriptions
 - AUTHORS: This file contains contributors to this repository
 - lb_shell.h: Header file containing all function prototypes and needed libraries
 - man_1_simple_shell: man page for simple_shell.
@@ -94,11 +94,11 @@ Task  |	Description
 - Environment
   - extern char **environ;
   
-### Bugs
+## Bugs
 No bugs are known
 
-### How To Compile
+## How To Compile
 Use the command: gcc -Wextra -Werror -Wall -pedantic *.c -o shell
 
-### Authors
+## Authors
 Roberto Palacios [Twitter](https://twitter.com/robpalacios11) | [GitHub](https://github.com/robpalacios1) | David De La Hoz [Twitter](https://twitter.com/davidddlhz) | [Github](https://twitter.com/DavidDlhz)
