@@ -7,9 +7,9 @@
 
 char *_strdup(char *str)
 {
-	int i;
-	int count;
-	char *s;
+	int i = 0;
+	int count = 0;
+	char *s = NULL;
 
 	count = 1;
 
