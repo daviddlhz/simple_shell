@@ -4,7 +4,7 @@
 This project is a command line interpreter that is a simple implementation of
 shell that we started April 1st 2020
 
-### Tasks :triangular_ruler:
+### Tasks
 Task  |	Description
 ----  | -----------
 0 |	Write a README, man page, and AUTHORS file for your shell.
@@ -55,7 +55,8 @@ Task  |	Description
 ### File Descriptions
 - AUTHORS: This file contains contributors to this repository
 - lb_shell.h: Header file containing all function prototypes and needed libraries
-- man_1_simple_shell: man page for simple_shell
+- man_1_simple_shell: man page for simple_shell.
+
 - Libraries I/O:
   - #include <stdio.h>
   - #include <stlib.h>
@@ -64,6 +65,14 @@ Task  |	Description
   - #include <sys/types.h>
   - #include <sys/wait.h>
   - #include <fcntl.h>
+  
+- Macros:
+  - #define DELIMITERS " \t\r\n\a :"
+  - #define NEWLINE write(STDOUT_FILENO, "\n", 1)
+  - #define SEARCH_PATH "PATH"
+  - #define DELIMITER_PATH "=:"
+  - #define MAX_SIZE 200
+  
 - Prototypes:
   - void perror(const char *str);
   - void prompt(void);
@@ -77,8 +86,14 @@ Task  |	Description
   - void concat_path(char **, char **);
   - char *_strcat(char *, char*);
   - char *_strcpy(char *, char *);
+  
+- Built-ins
+  - void clear(void);
+  - void s_exit(void);
+
 - Environment
   - extern char **environ;
+  
 ### Bugs
 No bugs are known
 
