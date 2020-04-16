@@ -6,12 +6,10 @@
  */
 char *path_get(void)
 {
-	int i;
+	int i = 0;
 	char *path = NULL;
-	char *get_env;
+	char *get_env = NULL;
 	char *find_path = NULL;
-
-	i = 0;
 
 
 	while (environ[i] != NULL)
