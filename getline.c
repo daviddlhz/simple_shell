@@ -17,6 +17,7 @@ char *_getline(char *buffer, int value_isa)
 		if (valid_get == EOF)
 		{
 			free(buffer);
+			buffer = NULL;
 			exit(EXIT_SUCCESS);
 		}
 	}
@@ -25,14 +26,17 @@ char *_getline(char *buffer, int value_isa)
 		if (valid_get == EOF)
 		{
 			free(buffer);
+			buffer = NULL;
 			NEWLINE;
 			exit(EXIT_SUCCESS);
 		}
 		if (*buffer == '\n')
 		{
+			free(buffer);
+			buffer = NULL;
+
 			return (NULL);
 		}
-
 	}
 	return (buffer);
 
