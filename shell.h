@@ -15,7 +15,7 @@
 #define NEWLINE write(STDOUT_FILENO, "\n", 1)
 #define SEARCH_PATH "PATH"
 #define DELIMITER_PATH "=:"
-#define MAX_SIZE 200
+#define MAX_SIZE 105
 
 /*Prototypes*/
 void perror(const char *str);

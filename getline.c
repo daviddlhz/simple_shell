@@ -2,6 +2,7 @@
 /**
  * _getline - get a new line
  * @buffer: a pointer
+ * @value_isa: valid if is non iterative
  * Return: reading a string of text.
  */
 char *_getline(char *buffer, int value_isa)
@@ -11,10 +12,11 @@ char *_getline(char *buffer, int value_isa)
 
 	valid_get = getline(&buffer, &size_buffer, stdin);
 
-	if(value_isa != 1)
+	if (value_isa != 1)
 	{
 		if (valid_get == EOF)
 		{
+			free(buffer);
 			exit(EXIT_SUCCESS);
 		}
 	}
@@ -22,6 +24,7 @@ char *_getline(char *buffer, int value_isa)
 	{
 		if (valid_get == EOF)
 		{
+			free(buffer);
 			NEWLINE;
 			exit(EXIT_SUCCESS);
 		}

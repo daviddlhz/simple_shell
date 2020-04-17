@@ -7,7 +7,7 @@
  */
 void exec_program(char *filename, char **commands)
 {
-	int status;
+	int status = 0;
 	pid_t pid;
 
 	pid = fork();
@@ -20,7 +20,7 @@ void exec_program(char *filename, char **commands)
 	{
 		if (execve(filename, commands, NULL) == -1)
 		{
-			perror("Errorx ");
+			perror("Error ");
 		}
 	}
 	else
