@@ -99,7 +99,15 @@ Task  |	Description
 No bugs are known
 
 ## How To Compile
-Use the command: gcc -Wextra -Werror -Wall -pedantic *.c -o shell
+Use the command: gcc -Wextra -Werror -Wall -pedantic *.c -o hsh
+
+## Examples
+when we compile our executable file ./hsh
+
+~~~
+#!/bin/bash
+echo "esto es un script"
+~~~
 
 ## Authors
 Roberto Palacios [Twitter](https://twitter.com/robpalacios11) | [GitHub](https://github.com/robpalacios1) | David De La Hoz [Twitter](https://twitter.com/DavidDlhz) | [Github](https://github.com/daviddlhz)
