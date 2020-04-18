@@ -1,3 +1,4 @@
+
 # Simple_shell (DavRob-Shell)
 
 ## Description
@@ -101,13 +102,46 @@ No bugs are known
 ## How To Compile
 Use the command: gcc -Wextra -Werror -Wall -pedantic *.c -o hsh
 
+## How to used
+Firts executed the DavRob shell using  **_./hsh_** in the terminal and press enter: 
+
+
 ## Examples
 when we compile our executable file ./hsh
 
-~~~
-#!/bin/bash
-echo "esto es un script"
-~~~
+    daviddlhz@LAPTOP-8746PFEQ:~/simple_shell$ ./hsh
+    DavRob-Shell($)   
+now writing the commands for example:
 
+    DavRob-Shell($) ls
+    AUTHORS     concat_path.c   getline.c           path_get.c  shell.c
+    README.md   exec_program.c  hsh                 prompt.c    shell.h
+    builtins.c  functions.c     man_1_simple_shell  script      split_buffer.c
+    DavRob-Shell($) pwd
+    /home/daviddlhz/simple_shell
+    DavRob-Shell($)    
+The DavRob Shell found in the two diferents mode iterative and non iterative the before example is iterative, now show the DavRob Shell work in non-iterative mode:
+
+    daviddlhz@LAPTOP-8746PFEQ:~/simple_shell$ echo "/bin/ls" | ./hsh
+    AUTHORS     concat_path.c   getline.c           path_get.c  shell.c
+    README.md   exec_program.c  hsh                 prompt.c    shell.h
+    builtins.c  functions.c     man_1_simple_shell  script      split_buffer.c
+    daviddlhz@LAPTOP-8746PFEQ:~/simple_shell$  
+
+We can executed a file in the current directory
+
+~~~
+DavRob-Shell($) ls
+AUTHORS     concat_path.c   getline.c           path_get.c  shell.c
+README.md   exec_program.c  hsh                 prompt.c    shell.h
+builtins.c  functions.c     man_1_simple_shell  script      split_buffer.c
+DavRob-Shell($) ./script
+This is a script
+DavRob-Shell($)   
+~~~
+Also integrate the exit command and `clear` in the DavRobShell
+If you type `exit` and press enter or press `ctrl + d` the shell proccess finish.
+
+And `clear` is used for clearly the shell.
 ## Authors
 Roberto Palacios [Twitter](https://twitter.com/robpalacios11) | [GitHub](https://github.com/robpalacios1) | David De La Hoz [Twitter](https://twitter.com/DavidDlhz) | [Github](https://github.com/daviddlhz)
