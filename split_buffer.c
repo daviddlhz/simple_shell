@@ -13,7 +13,7 @@ void split_buffer(char *buffer, char *path, char *argv)
 	char *commands[MAX_SIZE];
 	char *path_cut[MAX_SIZE];
 
-	current_path = path;
+	current_path = _strdup(path);
 	buffer = strtok(buffer, DELIMITERS);
 
 	while (buffer != NULL)
@@ -24,17 +24,16 @@ void split_buffer(char *buffer, char *path, char *argv)
 	}
 	commands[i] = '\0';
 
-	j = 0;
-	path = strtok(current_path, DELIMITER_PATH);
+		j = 0;
+		path = strtok(current_path, DELIMITER_PATH);
 
-	while (current_path != NULL)
-	{
-		path_cut[j] = current_path;
-		current_path = strtok(NULL, DELIMITER_PATH);
-		j++;
-	}
-	path_cut[j] = '\0';
-	free(buffer);
-	buffer = NULL;
-	concat_path(path_cut, commands, argv);
+		while (current_path != NULL)
+		{
+			path_cut[j] = current_path;
+			current_path = strtok(NULL, DELIMITER_PATH);
+			j++;
+		}
+		path_cut[j] = '\0';
+		free(buffer);
+		concat_path(path_cut, commands, argv);
 }
